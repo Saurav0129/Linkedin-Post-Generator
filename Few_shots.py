@@ -1,9 +1,10 @@
 import pandas as pd
 import json
+import os
 
 
 class FewShotPosts:
-    def __init__(self, file_path=r"data\preprocessed.json"):
+    def __init__(self, file_path=os.path.join("data", "preprocessed.json")):
         self.df = None
         self.unique_tags = None
         self.load_posts(file_path)
